@@ -125,6 +125,7 @@ Las reseñas también utilizarán referencias mediante los campos `usuario_id` y
   "contenido_id": "P001"
 }
 ```
+
 ## Consultas previstas
 
 La aplicación deberá permitir realizar las siguientes consultas:
@@ -135,6 +136,58 @@ La aplicación deberá permitir realizar las siguientes consultas:
 - Obtener los capítulos de una serie.
 - Consultar las reseñas de una película o serie.
 - Consultar las reseñas realizadas por un usuario.
+
+## Consultas realizadas
+
+Las consultas fueron probadas utilizando MongoDB Compass sobre la base de datos `peliculas_series`.
+
+### Buscar una película por título
+
+```json
+{ "titulo": "Spider-Man" }
+```
+
+La consulta permitió obtener la película correspondiente a partir de su título.
+
+### Buscar una serie por título
+
+```json
+{ "titulo": "Stranger Things" }
+```
+
+La consulta permitió obtener la serie correspondiente a partir de su título.
+
+### Buscar películas y series por género
+
+```json
+{ "generos": "Acción" }
+```
+
+La consulta permitió obtener los contenidos que contienen el género `Acción`.
+
+### Obtener los capítulos de una serie
+
+```json
+{ "serie_id": "S001" }
+```
+
+La consulta permitió obtener los capítulos asociados a la serie identificada como `S001`.
+
+### Consultar las reseñas de una película
+
+```json
+{ "contenido_id": "P001" }
+```
+
+La consulta permitió obtener las reseñas asociadas a la película identificada como `P001`.
+
+### Consultar las reseñas realizadas por un usuario
+
+```json
+{ "usuario_id": "U001" }
+```
+
+La consulta permitió obtener las reseñas realizadas por el usuario identificado como `U001`.
 
 ## Fundamentación de la lógica no relacional
 

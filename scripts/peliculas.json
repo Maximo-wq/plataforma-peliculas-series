@@ -1,0 +1,87 @@
+[
+  {
+    "_id": "P001",
+    "titulo": "Spider-Man",
+    "descripcion": "Una película de superhéroes.",
+    "fechaEstreno": "2002-05-03",
+    "generos": ["Acción", "Aventura"],
+    "duracion": 121
+  },
+  {
+    "_id": "P002",
+    "titulo": "Avengers: Endgame",
+    "descripcion": "Los héroes restantes enfrentan su batalla final contra Thanos.",
+    "fechaEstreno": "2019-04-26",
+    "generos": ["Acción", "Aventura"],
+    "duracion": 181
+  },
+  {
+    "_id": "P003",
+    "titulo": "Interstellar",
+    "descripcion": "Un grupo de exploradores viaja por el espacio en busca de un nuevo hogar.",
+    "fechaEstreno": "2014-11-07",
+    "generos": ["Ciencia ficción", "Drama"],
+    "duracion": 169
+  },
+  {
+    "_id": "P004",
+    "titulo": "Toy Story",
+    "descripcion": "Un grupo de juguetes cobra vida cuando los humanos no están presentes.",
+    "fechaEstreno": "1995-11-22",
+    "generos": ["Animación", "Aventura"],
+    "duracion": 81
+  },
+  {
+    "_id": "P005",
+    "titulo": "John Wick",
+    "descripcion": "Un antiguo asesino regresa a la acción para vengarse de quienes le quitaron lo que más quería.",
+    "fechaEstreno": "2014-10-24",
+    "generos": ["Acción", "Thriller"],
+    "duracion": 101
+  },
+  {
+    "_id": "P006",
+    "titulo": "Jurassic Park",
+    "descripcion": "Un parque temático con dinosaurios clonados se convierte en una lucha por sobrevivir.",
+    "fechaEstreno": "1993-06-11",
+    "generos": ["Aventura", "Ciencia ficción"],
+    "duracion": 127
+  },
+  {
+    "_id": "P007",
+    "titulo": "The Dark Knight",
+    "descripcion": "Batman enfrenta al Joker mientras Gotham atraviesa una ola de caos.",
+    "fechaEstreno": "2008-07-18",
+    "generos": ["Acción", "Crimen", "Drama"],
+    "duracion": 152
+  },
+  {
+    "_id": "P008",
+    "titulo": "Coco",
+    "descripcion": "Un niño viaja al mundo de los muertos para descubrir los secretos de su familia.",
+    "fechaEstreno": "2017-11-22",
+    "generos": ["Animación", "Aventura", "Familia"],
+    "duracion": 105,
+    "clasificacion": "ATP"
+  },
+  {
+    "_id": "P009",
+    "titulo": "Dune",
+    "descripcion": "Un joven noble debe enfrentarse a conflictos políticos en un planeta desértico.",
+    "fechaEstreno": "2021-10-22",
+    "generos": ["Ciencia ficción", "Aventura"],
+    "duracion": 155,
+    "detalles": {
+      "calificacion": 8.6,
+      "tipo": "Película épica"
+    }
+  },
+  {
+    "_id": "P010",
+    "titulo": "Shrek",
+    "descripcion": "Un ogro emprende una aventura para recuperar la tranquilidad de su pantano.",
+    "fechaEstreno": "2001-05-18",
+    "generos": ["Animación", "Comedia", "Aventura"],
+    "duracion": 90
+  }
+]

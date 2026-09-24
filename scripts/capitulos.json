@@ -1,0 +1,109 @@
+[
+  {
+    "_id": "C001",
+    "serie_id": "S001",
+    "temporada": 1,
+    "numero": 1,
+    "titulo": "Capítulo 1",
+    "duracion": 45,
+    "fechaEstreno": "2026-01-10"
+  },
+  {
+    "_id": "C002",
+    "serie_id": "S002",
+    "temporada": 1,
+    "numero": 1,
+    "titulo": "Piloto",
+    "duracion": 58,
+    "fechaEstreno": "2008-01-20"
+  },
+  {
+    "_id": "C003",
+    "serie_id": "S003",
+    "temporada": 1,
+    "numero": 1,
+    "titulo": "El nombre del juego",
+    "duracion": 61,
+    "fechaEstreno": "2019-07-26"
+  },
+  {
+    "_id": "C004",
+    "serie_id": "S004",
+    "temporada": 1,
+    "numero": 1,
+    "titulo": "Wednesday's Child Is Full of Woe",
+    "duracion": 49,
+    "fechaEstreno": "2022-11-23"
+  },
+  {
+    "_id": "C005",
+    "serie_id": "S005",
+    "temporada": 1,
+    "numero": 1,
+    "titulo": "Soy Luffy, el hombre que será el Rey de los Piratas",
+    "duracion": 24,
+    "fechaEstreno": "1999-10-20"
+  },
+  {
+    "_id": "C006",
+    "serie_id": "S006",
+    "temporada": 1,
+    "numero": 1,
+    "titulo": "When You're Lost in the Darkness",
+    "duracion": 81,
+    "fechaEstreno": "2023-01-15"
+  },
+  {
+    "_id": "C007",
+    "serie_id": "S001",
+    "temporada": 1,
+    "numero": 2,
+    "titulo": "El segundo capítulo",
+    "duracion": 47,
+    "fechaEstreno": "2026-01-17"
+  },
+  {
+    "_id": "C008",
+    "serie_id": "S002",
+    "temporada": 1,
+    "numero": 2,
+    "titulo": "Una nueva aventura",
+    "duracion": 52,
+    "fechaEstreno": "2008-01-27",
+    "detalles": {
+      "calificacion": 8.4,
+      "tipo": "Especial"
+    }
+  },
+  {
+    "_id": "C009",
+    "serie_id": "S003",
+    "temporada": 1,
+    "numero": 2,
+    "titulo": "Una nueva amenaza",
+    "duracion": 55,
+    "fechaEstreno": "2019-08-02",
+    "detalles": {
+      "calificacion": 9.1,
+      "tipo": "Capítulo especial",
+      "invitados": [
+        "Actor invitado 1",
+        "Actor invitado 2"
+      ]
+    }
+  },
+  {
+    "_id": "C010",
+    "serie_id": "S004",
+    "temporada": 1,
+    "numero": 2,
+    "titulo": "The Next Episode",
+    "duracion": 51,
+    "fechaEstreno": "2022-11-30",
+    "sinopsis": "Los acontecimientos continúan después de lo ocurrido en el capítulo anterior.",
+    "detalles": {
+      "calificacion": 8.7,
+      "tipo": "Capítulo regular"
+    }
+  }
+]

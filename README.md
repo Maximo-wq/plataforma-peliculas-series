@@ -248,7 +248,7 @@ db.peliculas.find({
 **Problema de negocio que resuelve:**  
 Permite localizar rápidamente una película específica dentro de la plataforma utilizando su título.
 
-<img width="1600" height="898" alt="image" src="https://github.com/user-attachments/assets/7a6a6067-b0a1-4ff5-b3b5-5498c3e327f2" />
+![Consulta 1](./capturas/fase2/01-consulta1.png)
 
 
 

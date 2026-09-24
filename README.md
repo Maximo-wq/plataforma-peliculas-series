@@ -201,6 +201,7 @@ El modelo propuesto busca facilitar las consultas principales de la aplicación 
 
 
 
+
 # Fase 2 - Implementación, Sembrado de Datos y Consultas CRUD
 
 ## 1. Implementación de la base de datos
@@ -247,8 +248,10 @@ db.peliculas.find({
 
 **Problema de negocio que resuelve:**  
 Permite localizar rápidamente una película específica dentro de la plataforma utilizando su título.
+```
 
-![Consulta 1](./capturas/fase2/01-consulta1.png)
+<img width="1600" height="898" alt="consulta1" src="https://github.com/user-attachments/assets/77f6b2b1-e0e8-4a3f-8aa8-2bd8f8ed02dc" />
+
 
 
 
@@ -260,11 +263,13 @@ Esta consulta permite encontrar películas cuya duración sea mayor a 150 minuto
 db.peliculas.find({
   duracion: { $gt: 150 }
 })
+```
 
 Problema de negocio que resuelve:
 Permite identificar películas de larga duración para facilitar la búsqueda de contenidos según el tiempo disponible del usuario.
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/15077dd4-a64a-438a-89d0-a2ddaead29d4" />
+<img width="1600" height="900" alt="consulta2" src="https://github.com/user-attachments/assets/fb102c7e-b670-4f09-8683-0d02802ff39d" />
+
 
 
 
@@ -276,11 +281,12 @@ Esta consulta permite buscar capítulos que tengan una calificación superior a 
 db.capitulos.find({
   "detalles.calificacion": { $gt: 8.5 }
 })
-
+```
 Problema de negocio que resuelve:
 Permite encontrar capítulos con una calificación alta utilizando información almacenada dentro de un objeto anidado.
 
-<img width="1600" height="890" alt="image" src="https://github.com/user-attachments/assets/c4cb1054-61bf-4a18-98d1-52b7e10e7c24" />
+<img width="1600" height="890" alt="consulta3" src="https://github.com/user-attachments/assets/bcebc057-3c2e-4f6d-9637-a513542b19f4" />
+
 
 
 
@@ -298,11 +304,11 @@ db.peliculas.find(
     duracion: 1
   }
 )
-
+```
 Problema de negocio que resuelve:
 Permite consultar de forma más clara y eficiente la información principal de las películas, mostrando únicamente los campos necesarios.
 
-<img width="1600" height="903" alt="image" src="https://github.com/user-attachments/assets/39241dc4-cfb4-405c-bcaf-1d5d6b53dc2c" />
+<img width="1600" height="903" alt="consulta4" src="https://github.com/user-attachments/assets/7245de83-2ed4-4db0-a7b6-1b00be71a506" />
 
 
 
@@ -316,11 +322,11 @@ db.peliculas.find({
     $all: ["Acción", "Aventura"]
   }
 })
-
+```
 Problema de negocio que resuelve:
 Permite encontrar películas que pertenezcan a varios géneros específicos al mismo tiempo, facilitando la búsqueda de contenido según las preferencias del usuario.
 
-<img width="1600" height="902" alt="image" src="https://github.com/user-attachments/assets/79abcea8-5277-458c-ac3d-1a3592e5de4a" />
+<img width="1600" height="902" alt="consulta5" src="https://github.com/user-attachments/assets/04ba72a0-d505-4983-a7ab-fdcef7cda3b3" />
 
 
 
@@ -340,11 +346,11 @@ db.usuarios.updateOne(
     }
   }
 )
-
+```
 Problema de negocio que resuelve:
 Permite actualizar información de un usuario y agregar nuevas propiedades sin necesidad de modificar toda la estructura del documento.
 
-<img width="381" height="505" alt="image" src="https://github.com/user-attachments/assets/f489453a-fb17-4b30-a34c-6b162453ab11" />
+<img width="381" height="505" alt="update_set" src="https://github.com/user-attachments/assets/1d1db868-c3ae-48c0-a099-202df34dbe7d" />
 
 
 
@@ -361,11 +367,11 @@ db.resenas.updateOne(
     }
   }
 )
-
+```
 Problema de negocio que resuelve:
 Permite incrementar de forma atómica un contador asociado a una reseña, por ejemplo, para registrar cuántos usuarios consideran útil esa reseña.
 
-<img width="335" height="504" alt="image" src="https://github.com/user-attachments/assets/94be392a-bf58-4678-88d3-b072982c9aea" />
+<img width="335" height="504" alt="update_inc" src="https://github.com/user-attachments/assets/fdd192d2-1364-4413-907e-77226085b746" />
 
 
 
@@ -377,10 +383,10 @@ Esta operación elimina una reseña específica utilizando su identificador úni
 db.resenas.deleteOne({
   _id: "R010"
 })
-
+```
 Problema de negocio que resuelve:
 Permite eliminar de forma segura una reseña específica utilizando un criterio de identificación único, evitando eliminar accidentalmente otros documentos.
 
-<img width="289" height="327" alt="image" src="https://github.com/user-attachments/assets/2d4e61df-beff-4763-aef2-01b46f37c063" />
+<img width="289" height="327" alt="delete" src="https://github.com/user-attachments/assets/01c17234-6ffa-4c26-be4e-66bfed57b953" />
 
 

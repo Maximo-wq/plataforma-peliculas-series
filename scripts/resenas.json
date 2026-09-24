@@ -1,0 +1,85 @@
+[
+  {
+    "_id": "R001",
+    "usuario_id": "U001",
+    "contenido_id": "P001",
+    "puntuacion": 5,
+    "comentario": "Muy buena película.",
+    "fecha": "2026-08-18",
+    "utiles": 1
+  },
+  {
+    "_id": "R002",
+    "usuario_id": "U002",
+    "contenido_id": "P002",
+    "puntuacion": 4,
+    "comentario": "Muy entretenida y con mucha acción.",
+    "fecha": "2026-08-10"
+  },
+  {
+    "_id": "R003",
+    "usuario_id": "U003",
+    "contenido_id": "P003",
+    "puntuacion": 5,
+    "comentario": "Excelente película, especialmente por la historia.",
+    "fecha": "2026-08-11"
+  },
+  {
+    "_id": "R004",
+    "usuario_id": "U004",
+    "contenido_id": "S002",
+    "puntuacion": 5,
+    "comentario": "Una de las mejores series que vi.",
+    "fecha": "2026-08-12"
+  },
+  {
+    "_id": "R005",
+    "usuario_id": "U005",
+    "contenido_id": "S003",
+    "puntuacion": 4,
+    "comentario": "Muy buena serie y personajes interesantes.",
+    "fecha": "2026-08-13"
+  },
+  {
+    "_id": "R006",
+    "usuario_id": "U006",
+    "contenido_id": "P006",
+    "puntuacion": 5,
+    "comentario": "Un clásico que sigue siendo muy entretenido.",
+    "fecha": "2026-08-14"
+  },
+  {
+    "_id": "R007",
+    "usuario_id": "U007",
+    "contenido_id": "P007",
+    "puntuacion": 5,
+    "comentario": "Una película excelente, con una gran historia.",
+    "fecha": "2026-08-15"
+  },
+  {
+    "_id": "R008",
+    "usuario_id": "U008",
+    "contenido_id": "P008",
+    "puntuacion": 4,
+    "comentario": "Muy divertida y con una historia emocionante.",
+    "fecha": "2026-08-16",
+    "spoilers": false
+  },
+  {
+    "_id": "R009",
+    "usuario_id": "U009",
+    "contenido_id": "P009",
+    "puntuacion": 5,
+    "comentario": "La ambientación y los efectos son excelentes.",
+    "fecha": "2026-08-17",
+    "spoilers": false
+  },
+  {
+    "_id": "R010",
+    "usuario_id": "U010",
+    "contenido_id": "P010",
+    "puntuacion": 4,
+    "comentario": "Una película divertida para toda la familia.",
+    "fecha": "2026-08-18"
+  }
+]

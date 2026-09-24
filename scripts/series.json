@@ -1,0 +1,82 @@
+[
+  {
+    "_id": "S001",
+    "titulo": "Serie ejemplo",
+    "descripcion": "Descripción de la serie.",
+    "fechaEstreno": "2026-01-10",
+    "generos": ["Drama", "Misterio"]
+  },
+  {
+    "_id": "S002",
+    "titulo": "Breaking Bad",
+    "descripcion": "Un profesor de química comienza a fabricar drogas y se adentra en el mundo criminal.",
+    "fechaEstreno": "2008-01-20",
+    "generos": ["Drama", "Crimen"],
+    "temporadas": 5
+  },
+  {
+    "_id": "S003",
+    "titulo": "The Boys",
+    "descripcion": "Un grupo de personas intenta detener a superhéroes corruptos que abusan de su poder.",
+    "fechaEstreno": "2019-07-26",
+    "generos": ["Acción", "Drama"],
+    "temporadas": 4
+  },
+  {
+    "_id": "S004",
+    "titulo": "Wednesday",
+    "descripcion": "Wednesday Addams investiga misterios mientras estudia en la Academia Nevermore.",
+    "fechaEstreno": "2022-11-23",
+    "generos": ["Comedia", "Misterio"],
+    "temporadas": 1
+  },
+  {
+    "_id": "S005",
+    "titulo": "One Piece",
+    "descripcion": "Monkey D. Luffy y su tripulación recorren los mares en busca del legendario tesoro One Piece.",
+    "fechaEstreno": "1999-10-20",
+    "generos": ["Aventura", "Acción"],
+    "temporadas": 21
+  },
+  {
+    "_id": "S006",
+    "titulo": "The Last of Us",
+    "descripcion": "Joel y Ellie atraviesan un mundo devastado mientras intentan sobrevivir.",
+    "fechaEstreno": "2023-01-15",
+    "generos": ["Drama", "Aventura"],
+    "temporadas": 2
+  },
+  {
+    "_id": "S007",
+    "titulo": "Stranger Things",
+    "descripcion": "Un grupo de amigos descubre secretos sobrenaturales en su pueblo.",
+    "fechaEstreno": "2016-07-15",
+    "generos": ["Ciencia ficción", "Drama", "Misterio"],
+    "temporadas": 4
+  },
+  {
+    "_id": "S008",
+    "titulo": "Arcane",
+    "descripcion": "Dos hermanas quedan enfrentadas por un conflicto entre dos ciudades.",
+    "fechaEstreno": "2021-11-06",
+    "generos": ["Animación", "Acción", "Drama"],
+    "temporadas": 2,
+    "plataformas": ["Netflix"]
+  },
+  {
+    "_id": "S009",
+    "titulo": "Dark",
+    "descripcion": "La desaparición de un niño revela secretos relacionados con viajes en el tiempo.",
+    "fechaEstreno": "2017-12-01",
+    "generos": ["Drama", "Misterio", "Ciencia ficción"],
+    "temporadas": 3
+  },
+  {
+    "_id": "S010",
+    "titulo": "The Mandalorian",
+    "descripcion": "Un cazador de recompensas recorre la galaxia mientras protege a una misteriosa criatura.",
+    "fechaEstreno": "2019-11-12",
+    "generos": ["Acción", "Aventura", "Ciencia ficción"],
+    "temporadas": 3
+  }
+]

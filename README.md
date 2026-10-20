@@ -390,3 +390,99 @@ Permite eliminar de forma segura una reseña específica utilizando un criterio 
 <img width="289" height="327" alt="delete" src="https://github.com/user-attachments/assets/01c17234-6ffa-4c26-be4e-66bfed57b953" />
 
 
+
+---
+
+# Fase 3 - Resiliencia, Transacciones y Securización
+
+## 1. Objetivo
+
+Implementar mecanismos de resiliencia, transacciones ACID y control de acceso en MongoDB para mejorar la disponibilidad, la integridad de los datos y la seguridad de la base de datos.
+
+## 2. Arquitectura del Replica Set
+
+Se configuró un Replica Set local llamado `rsPeliculas`, compuesto por tres nodos:
+
+| Nodo | Puerto | Función |
+|---|---:|---|
+| Nodo 1 | 27018 | Primary inicial |
+| Nodo 2 | 27019 | Secondary y nuevo Primary durante la prueba |
+| Nodo 3 | 27020 | Arbiter |
+
+```text
+                 Replica Set: rsPeliculas
+                          |
+             +------------+------------+
+             |            |            |
+        localhost      localhost    localhost
+          :27018         :27019       :27020
+          Primary       Secondary     Arbiter
+             |
+       Replicación de datos
+```
+
+El Secondary mantiene una copia de los datos del Primary. El Arbiter participa en las votaciones para elegir un Primary, pero no almacena los datos replicados.
+
+## 3. Pruebas de resiliencia
+
+### 3.1. Estado del Replica Set
+
+Se verificaron los estados de los tres nodos mediante `rs.status()`.
+
+### 3.2. Replicación
+
+Se insertó un registro de prueba en el Primary y se comprobó su presencia en el Secondary mediante una consulta a la colección `registros`.
+
+### 3.3. Failover
+
+Durante las pruebas, el nodo `localhost:27019` apareció como nuevo Primary. Se insertaron y consultaron registros después de la elección para comprobar que el nodo elegido aceptaba escrituras.
+
+Las capturas de estas pruebas están en `capturas/fase3/`.
+
+## 4. Transacciones ACID
+
+Se creó el script `scripts/fase3/transaccion.js` para probar transferencias entre dos cuentas en la base `prueba_transacciones`.
+
+### 4.1. Transacción exitosa
+
+Se transfirieron 100 unidades de la cuenta A a la cuenta B. La transacción se confirmó con `commitTransaction()`.
+
+- Saldo inicial de A: 1000
+- Saldo inicial de B: 500
+- Saldo final de A: 900
+- Saldo final de B: 600
+
+### 4.2. Fallo y rollback
+
+Se simuló un error antes de confirmar una segunda transferencia. La transacción se canceló con `abortTransaction()`.
+
+Los saldos finales permanecieron en A = 900 y B = 600, lo que demuestra que los cambios de la segunda operación no se aplicaron.
+
+## 5. Seguridad y control de acceso
+
+Se habilitó el control de acceso mediante autenticación y se crearon los siguientes usuarios:
+
+| Usuario | Base de autenticación | Rol | Alcance |
+|---|---|---|---|
+| `adminMaxi` | `admin` | `root` | Administración del entorno |
+| `appPeliculas` | `peliculas_series` | `readWrite` | Lectura y escritura en la base del proyecto |
+
+El usuario de aplicación sigue el principio de mínimo privilegio: puede leer y modificar los datos de `peliculas_series`, pero no recibe el rol administrativo `root`.
+
+### 5.1. Prueba de autenticación
+
+Se verificó que `appPeliculas` pudiera autenticarse y que MongoDB mostrara el rol `readWrite` sobre `peliculas_series`.
+
+### 5.2. Rechazo del acceso anónimo
+
+Se realizaron consultas sin credenciales y MongoDB respondió con errores `Unauthorized`, confirmando que las operaciones protegidas requieren autenticación.
+
+### 5.3. Evidencias
+
+Las capturas de la Fase 3 se encuentran en `capturas/fase3/`.
+
+## 6. Conclusiones
+
+La fase permitió practicar la replicación de datos, la elección de un nuevo Primary, las transacciones con confirmación y rollback, y la creación de usuarios con diferentes niveles de permisos.
+
+Las pruebas se realizaron en un entorno local de laboratorio. La configuración y las evidencias documentan los resultados observados durante la ejecución.

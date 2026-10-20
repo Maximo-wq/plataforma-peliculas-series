@@ -66,16 +66,17 @@ try {
   throw new Error("Fallo simulado durante la transferencia.");
 
 } catch (error) {
-  if (session.inTransaction()) {
+  try {
     session.abortTransaction();
     print("ROLLBACK: transacción cancelada con abortTransaction().");
+  } catch (abortError) {
+    print("Error al abortar: " + abortError.message);
   }
-  print("Motivo: " + error.message);
 
+  print("Motivo: " + error.message);
 } finally {
   session.endSession();
 }
-
 // Comprobar que el segundo intento no cambió los saldos.
 print("Saldos finales después del rollback:");
 printjson(testDB.cuentas.find().toArray());
